@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // WhatsApp number (replace with actual number)
-        const whatsappNumber = '6281234567890'; // Replace with actual number
+        const whatsappNumber = '6282124198198'; // Replace with actual number
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
         
         // Open WhatsApp in new tab
