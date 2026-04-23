@@ -1,16 +1,19 @@
 ﻿<!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Service - HVP - STRATIVO</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  
+
   <nav class="navbar">
     <div class="container">
-      <a href="index.html" class="navbar-logo"><img src="assets/logo.png" alt="STRATIVO" style="height: 40px; width: auto;"></a>
+      <a href="index.html" class="navbar-logo"><img src="assets/logo.png" alt="STRATIVO"
+          style="height: 40px; width: auto;"></a>
       <div class="navbar-toggle"><span></span><span></span><span></span></div>
       <ul class="navbar-menu">
         <li><a href="index.html">Beranda</a></li>
@@ -42,106 +45,240 @@
     </div>
   </nav>
 
-  <section class="section" style="padding-top: 150px;">
+  <!-- HERO SECTION - Premium Impact -->
+  <section class="hero-hvp premium-gradient">
     <div class="container">
-      <div class="text-center mb-xl">
-        <h1 style="color: var(--color-primary); margin-bottom: 1rem; line-height: 1.2;"><img src="assets/logo-hvp.png" alt="HVP" class="centered-logo" style="max-height: 80px; width: auto;"><br><span style="font-size: 1.25rem; font-weight: normal; margin-top: 0.5rem; display: inline-block;">(High Value Partnership)</span></h1>
-        <p class="text-large">Layanan Full Services: Dari Konsultasi Strategis hingga Eksekusi Teknis.</p>
+      <span class="eyebrow">✨ High Value Partnership</span>
+      <h1>Ubah Kompleksitas Bisnis Menjadi <span class="text-accent">Keunggulan Kompetitif</span></h1>
+      <p class="hero-subtitle">
+        9 layanan strategis terintegrasi yang telah membantu 150+ perusahaan
+        meningkatkan efisiensi hingga 40% dan pertumbuhan revenue hingga 3x lipat.
+      </p>
+
+      <div class="trust-badges">
+        <span>✅ Garansi Hasil</span>
+        <span>✅ Tim Sertifikasi Internasional</span>
+        <span>✅ Support 24/7</span>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- SERVICES GRID - Clickable Cards with Teaser Copy -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Layanan Full Services</span>
+        <h2>Solusi End-to-End untuk Setiap Tantangan Bisnis Anda</h2>
+        <p>Klik setiap layanan untuk mengeksplorasi bagaimana kami dapat mengubah tantangan Anda menjadi peluang
+          pertumbuhan.</p>
       </div>
 
-      <div style="max-width: 800px; margin: 0 auto;">
-        
-        <div class="accordion">
-          <div class="accordion-header">
-            <span>Manajemen Stratejik</span>
-            <span class="accordion-icon">▼</span>
+      <div class="service-grid-premium">
+        <!-- Card 1: Manajemen Stratejik -->
+        <a href="service-hvp-strategic.html" class="service-card-premium" data-service="strategic">
+          <div class="service-card-icon">🎯</div>
+          <h3>Manajemen Stratejik</h3>
+          <p class="service-teaser">
+            "Bisnis Anda seperti kapal tanpa kompas? Kami bantu Anda merancang arah yang jelas,
+            memprediksi badai pasar, dan berlayar menuju pertumbuhan berkelanjutan..."
+          </p>
+          <div class="service-highlights">
+            <span>✨ Visi & Misi yang Menggerakkan</span>
+            <span>📈 Business Model Innovation</span>
+            <span>🗺️ Roadmap 1-5 Tahun</span>
           </div>
-          <div class="accordion-body">
-            <p class="mt-sm mb-sm">Menyusun strategi korporat yang kokoh, mulai dari visi misi, model bisnis, hingga perencanaan jangka panjang yang menjamin keberlanjutan bisnis di tengah kompetisi.</p>
-          </div>
-        </div>
+          <span class="read-more">Pelajari Solusi <span class="arrow">→</span></span>
+        </a>
 
-        <div class="accordion">
-          <div class="accordion-header">
-            <span>Manajemen Proses Bisnis</span>
-            <span class="accordion-icon">▼</span>
+        <!-- Card 2: Manajemen Proses Bisnis -->
+        <a href="service-hvp-process.html" class="service-card-premium" data-service="process">
+          <div class="service-card-icon">⚙️</div>
+          <h3>Manajemen Proses Bisnis</h3>
+          <p class="service-teaser">
+            "Tim Anda sibuk, tapi hasil kurang maksimal? Kami bongkar bottleneck tersembunyi,
+            dan ubah alur kerja Anda menjadi mesin produktivitas yang ramping..."
+          </p>
+          <div class="service-highlights">
+            <span>🔍 Process Audit & Mapping</span>
+            <span>🗑️ Waste Elimination</span>
+            <span>⚡ Lean Implementation</span>
           </div>
-          <div class="accordion-body">
-            <p class="mt-sm mb-sm">Audit dan restrukturisasi SOP, pemetaan proses untuk mendeteksi bottleneck, dan implementasi proses yang lebih ramping (lean) dan efisien.</p>
-          </div>
-        </div>
+          <span class="read-more">Pelajari Solusi <span class="arrow">→</span></span>
+        </a>
 
-        <div class="accordion">
-          <div class="accordion-header">
-            <span>Manajemen Produksi & Operasi</span>
-            <span class="accordion-icon">▼</span>
+        <!-- Card 3: Manajemen Produksi & Operasi -->
+        <a href="service-hvp-production.html" class="service-card-premium" data-service="production">
+          <div class="service-card-icon">🏭</div>
+          <h3>Manajemen Produksi & Operasi</h3>
+          <p class="service-teaser">
+            "Output tidak konsisten? Biaya membengkak? Kami optimalkan setiap aspek operasional
+            Anda agar kualitas tinggi menjadi standar, bukan pengecualian..."
+          </p>
+          <div class="service-highlights">
+            <span>📊 Capacity Planning</span>
+            <span>🎯 QC System Upgrade</span>
+            <span>🔧 Predictive Maintenance</span>
           </div>
-          <div class="accordion-body">
-            <p class="mt-sm mb-sm">Pengelolaan kapasitas produksi, kontrol kualitas (QC), perawatan mesin/aset, dan efisiensi tenaga kerja operasional.</p>
-          </div>
-        </div>
+          <span class="read-more">Pelajari Solusi <span class="arrow">→</span></span>
+        </a>
 
-        <div class="accordion">
-          <div class="accordion-header">
-            <span>Manajemen Rantai Pasokan</span>
-            <span class="accordion-icon">▼</span>
+        <!-- Card 4: Manajemen Rantai Pasokan -->
+        <a href="service-hvp-supply.html" class="service-card-premium" data-service="supply">
+          <div class="service-card-icon">🔗</div>
+          <h3>Manajemen Rantai Pasokan</h3>
+          <p class="service-teaser">
+            "Stok menumpuk atau justru kosong saat dibutuhkan? Kami integrasikan supply chain Anda
+            dari hulu ke hilir, sehingga efisiensi dan ketepatan waktu menjadi keunggulan Anda..."
+          </p>
+          <div class="service-highlights">
+            <span>📦 Smart Inventory Mgmt</span>
+            <span>🚚 Distribution Optimization</span>
+            <span>🤝 Supplier Relationship</span>
           </div>
-          <div class="accordion-body">
-            <p class="mt-sm mb-sm">Optimalisasi dari pengadaan bahan baku, manajemen gudang (inventory), hingga distribusi akhir ke pelanggan.</p>
-          </div>
-        </div>
+          <span class="read-more">Pelajari Solusi <span class="arrow">→</span></span>
+        </a>
 
-        <div class="accordion">
-          <div class="accordion-header">
-            <span>Intelijen Bisnis & Analitika Data</span>
-            <span class="accordion-icon">▼</span>
+        <!-- Card 5: Intelijen Bisnis & Analitika -->
+        <a href="service-hvp-analytics.html" class="service-card-premium" data-service="analytics">
+          <div class="service-card-icon">📊</div>
+          <h3>Intelijen Bisnis & Analitika</h3>
+          <p class="service-teaser">
+            "Data menumpuk tapi insight nol? Kami ubah angka-angka menjadi cerita strategis
+            yang memandu keputusan C-Level Anda dengan presisi dan kepercayaan diri..."
+          </p>
+          <div class="service-highlights">
+            <span>📈 Executive Dashboard</span>
+            <span>🔮 Predictive Analytics</span>
+            <span>🎯 KPI Intelligence</span>
           </div>
-          <div class="accordion-body">
-            <p class="mt-sm mb-sm">Pembuatan dashboard eksekutif, pengumpulan dan analisis data besar untuk memberikan insights penting yang mendukung keputusan C-Level.</p>
-          </div>
-        </div>
-        
-        <div class="accordion">
-          <div class="accordion-header">
-            <span>Manajemen Pemasaran & Merek</span>
-            <span class="accordion-icon">▼</span>
-          </div>
-          <div class="accordion-body">
-            <p class="mt-sm mb-sm">Strategi branding, riset pasar, kampanye digital, dan pengelolaan saluran penjualan untuk meningkatkan omset dan brand awareness.</p>
-          </div>
-        </div>
+          <span class="read-more">Pelajari Solusi <span class="arrow">→</span></span>
+        </a>
 
-        <div class="accordion">
-          <div class="accordion-header">
-            <span>Manajemen Keuangan, Akuntansi & Perpajakan</span>
-            <span class="accordion-icon">▼</span>
+        <!-- Card 6: Manajemen Pemasaran & Merek -->
+        <a href="service-hvp-marketing.html" class="service-card-premium" data-service="marketing">
+          <div class="service-card-icon">🚀</div>
+          <h3>Manajemen Pemasaran & Merek</h3>
+          <p class="service-teaser">
+            "Brand Anda tenggelam di tengah kebisingan pasar? Kami rancang strategi branding
+            yang memorable dan kampanye yang mengkonversi, sehingga audiens memilih Anda, bukan kompetitor..."
+          </p>
+          <div class="service-highlights">
+            <span>🎨 Brand Identity Revamp</span>
+            <span>📱 Digital Campaign Mastery</span>
+            <span>💰 ROI-Driven Strategy</span>
           </div>
-          <div class="accordion-body">
-            <p class="mt-sm mb-sm">Restrukturisasi finansial, pembuatan laporan keuangan standar, budgeting, hingga tax planning yang efisien dan sesuai regulasi.</p>
-          </div>
-        </div>
+          <span class="read-more">Pelajari Solusi <span class="arrow">→</span></span>
+        </a>
 
-        <div class="accordion">
-          <div class="accordion-header">
-            <span>Manajemen SDM, Organisasi & Legal</span>
-            <span class="accordion-icon">▼</span>
+        <!-- Card 7: Manajemen Keuangan & Pajak -->
+        <a href="service-hvp-finance.html" class="service-card-premium" data-service="finance">
+          <div class="service-card-icon">💰</div>
+          <h3>Manajemen Keuangan, Akuntansi & Pajak</h3>
+          <p class="service-teaser">
+            "Laporan keuangan hanya formalitas? Kami transformasi fungsi keuangan Anda
+            menjadi pusat intelijen bisnis yang mendukung ekspansi, efisiensi, dan kepatuhan tanpa stres..."
+          </p>
+          <div class="service-highlights">
+            <span>📑 Financial Restructuring</span>
+            <span>💡 Tax Optimization</span>
+            <span>🔐 Compliance Assurance</span>
           </div>
-          <div class="accordion-body">
-            <p class="mt-sm mb-sm">Penyusunan struktur organisasi, sistem KPI & Reward, legalitas korporasi, penyusunan kontrak, dan kepatuhan hukum tenaga kerja.</p>
-          </div>
-        </div>
+          <span class="read-more">Pelajari Solusi <span class="arrow">→</span></span>
+        </a>
 
-        <div class="accordion">
-          <div class="accordion-header">
-            <span>Enterprise System & SIM</span>
-            <span class="accordion-icon">▼</span>
+        <!-- Card 8: Manajemen SDM & Legal -->
+        <a href="service-hvp-hr.html" class="service-card-premium" data-service="hr">
+          <div class="service-card-icon">👥</div>
+          <h3>Manajemen SDM, Organisasi & Legal</h3>
+          <p class="service-teaser">
+            "Tim hebat tapi kinerja biasa? Kami susun struktur organisasi yang menginspirasi,
+            sistem reward yang memotivasi, dan legalitas yang melindungi—sehingga talenta Anda berkembang, bisnis Anda
+            aman..."
+          </p>
+          <div class="service-highlights">
+            <span>🏗️ Org Structure Design</span>
+            <span>🏆 KPI & Performance System</span>
+            <span>⚖️ Corporate Legal Shield</span>
           </div>
-          <div class="accordion-body">
-            <p class="mt-sm mb-sm">Integrasi software bisnis (ERP/CRM), pengelolaan infrastruktur IT, dan pengamanan data perusahaan.</p>
-          </div>
-        </div>
+          <span class="read-more">Pelajari Solusi <span class="arrow">→</span></span>
+        </a>
 
+        <!-- Card 9: Enterprise System & SIM -->
+        <a href="service-hvp-it.html" class="service-card-premium" data-service="it">
+          <div class="service-card-icon">💻</div>
+          <h3>Enterprise System & SIM</h3>
+          <p class="service-teaser">
+            "Sistem IT Anda seperti puzzle yang tidak nyambung? Kami integrasikan ERP, CRM, dan infrastruktur
+            Anda menjadi ekosistem digital yang powerful, aman, dan siap skalakan bisnis Anda..."
+          </p>
+          <div class="service-highlights">
+            <span>🔗 ERP/CRM Integration</span>
+            <span>🛡️ Cybersecurity Framework</span>
+            <span>📱 Digital Transformation</span>
+          </div>
+          <span class="read-more">Pelajari Solusi <span class="arrow">→</span></span>
+        </a>
       </div>
+    </div>
+  </section>
+
+  <!-- VALUE PROPOSITION BANNER -->
+  <section class="value-banner">
+    <div class="container">
+      <div class="stat-card">
+        <span class="counter" data-target="150">0</span><span>+</span>
+        <p>Klien Terpercaya</p>
+      </div>
+      <div class="stat-card">
+        <span class="counter" data-target="40">0</span><span>%</span>
+        <p>Rata-rata Peningkatan Efisiensi</p>
+      </div>
+      <div class="stat-card">
+        <span class="counter" data-target="9">0</span>
+        <p>Layanan Terintegrasi</p>
+      </div>
+      <div class="stat-card">
+        <span class="counter" data-target="24">0</span>/7
+        <p>Dedicated Support</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF SECTION -->
+  <section class="social-proof-section bg-gray">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Mereka yang Telah Bertransformasi Bersama Kami</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <p class="testimonial-text">
+            "Setelah STRATIVO mengoptimalkan supply chain kami, biaya logistik turun 35%
+            dan on-time delivery naik menjadi 98%. Investasi terbaik tahun ini!"
+          </p>
+          <div class="testimonial-author">
+            <div class="avatar">AD</div>
+            <div>
+              <strong>Andi Darmawan</strong>
+              <span>CEO, PT. Logistik Nusantara</span>
+            </div>
+          </div>
+        </div>
+        <!-- Add more testimonials -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section class="cta-final premium-cta">
+    <div class="container">
+      <h2>Siap Mengubah Tantangan Bisnis Menjadi Peluang Emas?</h2>
+      <p>Konsultasi strategis 30 menit GRATIS dengan ahli kami. Tanpa komitmen. Tanpa sales pressure.</p>
+      <a href="contact.html" class="btn btn-accent btn-lg">🎁 Jadwalkan Konsultasi Gratis Sekarang</a>
+      <p class="cta-note">🔒 Data Anda aman • 📞 Respons dalam 2 jam • 💯 100% Gratis</p>
     </div>
   </section>
 
@@ -153,7 +290,7 @@
           <p>PT. Bestindo Solusi Makmur</p>
           <p>Penyedia layanan pengembangan sistem manajemen bisnis terintegrasi, terukur, terbukti, berpengalaman.</p>
         </div>
-        
+
         <div class="footer-section">
           <h3>Navigasi</h3>
           <ul class="footer-links">
@@ -163,23 +300,51 @@
             <li><a href="contact.html">Kontak</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-section">
           <h3>Kontak Kami</h3>
-          <p style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Jl. Gayung Kebonsari Timur B. 36, Surabaya</p>
-          <p style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> info@strativo-bsm.com</p>
-          <p style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> 0821 2419 8198</p>
+          <p style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;"><svg width="18" height="18"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg> Jl. Gayung Kebonsari Timur B. 36, Surabaya</p>
+          <p style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;"><svg width="18" height="18"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg> info@strativo-bsm.com</p>
+          <p style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;"><svg width="18" height="18"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+              </path>
+            </svg> 0821 2419 8198</p>
           <div class="social-links" style="margin-top: 1rem; display: flex; gap: 1rem;">
-            <a href="https://www.instagram.com/strativo.bsm?igsh=MzkzdWk4MmJpc2Mw" target="_blank" style="color: var(--color-white); font-size: 1.5rem; text-decoration: none;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <a href="https://www.instagram.com/strativo.bsm?igsh=MzkzdWk4MmJpc2Mw" target="_blank"
+              style="color: var(--color-white); font-size: 1.5rem; text-decoration: none;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
             </a>
-            <a href="https://www.linkedin.com/in/strativo-bsm" target="_blank" style="color: var(--color-white); font-size: 1.5rem; text-decoration: none;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            <a href="https://www.linkedin.com/in/strativo-bsm" target="_blank"
+              style="color: var(--color-white); font-size: 1.5rem; text-decoration: none;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
             </a>
           </div>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <p>&copy; 2024 STRATIVO. Hak cipta dilindungi undang-undang.</p>
       </div>
@@ -187,8 +352,5 @@
   </footer>
   <script src="script.js"></script>
 </body>
+
 </html>
-
-
-
-
