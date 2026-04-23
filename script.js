@@ -471,3 +471,69 @@ document.querySelectorAll('.service-card-premium').forEach(card => {
   card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   serviceObserver.observe(card);
 });
+
+// ========================================
+// HVP Strategic Page Enhancements
+// ========================================
+
+// Smooth scroll for anchor links with navbar offset
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href === '#') return;
+    
+    const target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 80;
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// Fade-in animation for solution steps on scroll
+const solutionObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+      setTimeout(() => {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        entry.target.classList.add('animated');
+      }, index * 150);
+      solutionObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.solution-step').forEach(step => {
+  step.style.opacity = '0';
+  step.style.transform = 'translateY(20px)';
+  step.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  solutionObserver.observe(step);
+});
+
+// Track CTA clicks for analytics (optional)
+document.querySelectorAll('[href*="contact.html?service"]').forEach(link => {
+  link.addEventListener('click', function() {
+    const service = new URLSearchParams(this.search).get('service');
+    console.log(`CTA Clicked - Service: ${service}`);
+    // Optional: Send to analytics
+    // gtag('event', 'cta_click', { 'service': service });
+  });
+});
+
+// Add subtle hover effect enhancement for problem cards
+document.querySelectorAll('.problem-card').forEach(card => {
+  card.addEventListener('mouseenter', function() {
+    this.style.zIndex = '5';
+  });
+  card.addEventListener('mouseleave', function() {
+    this.style.zIndex = '1';
+  });
+});
+
