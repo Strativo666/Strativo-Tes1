@@ -537,3 +537,94 @@ document.querySelectorAll('.problem-card').forEach(card => {
   });
 });
 
+// === HVP Service Page Enhancements ===
+document.addEventListener('DOMContentLoaded', () => {
+  // Smooth scroll for anchor links (if any)
+  document.querySelectorAll('.hvp-service-page a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Simple fade-in on scroll (progressive enhancement)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.hvp-service-page section').forEach(sec => {
+    sec.style.opacity = 0;
+    sec.style.transform = 'translateY(20px)';
+    sec.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(sec);
+  });
+});
+
+// ========================================
+// HERO PRODUCTION - ENHANCEMENTS
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+  // Parallax effect on scroll for orbs
+  const orbs = document.querySelectorAll('.hero-production__orb');
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrolled = window.pageYOffset;
+        orbs.forEach((orb, index) => {
+          const speed = 0.3 + (index * 0.1);
+          const yPos = scrolled * speed;
+          orb.style.transform = `translateY(${yPos}px)`;
+        });
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Smooth reveal on scroll for hero content
+  const heroContent = document.querySelector('.hero-production__content');
+  if (heroContent) {
+    heroContent.style.opacity = '1';
+    heroContent.style.transform = 'translateY(0)';
+  }
+
+  // CTA button micro-interactions
+  const primaryCta = document.querySelector('.hero-production__cta--primary');
+  const secondaryCta = document.querySelector('.hero-production__cta--secondary');
+
+  if (primaryCta) {
+    primaryCta.addEventListener('mouseenter', () => {
+      primaryCta.style.transform = 'translateY(-3px) scale(1.02)';
+    });
+    primaryCta.addEventListener('mouseleave', () => {
+      primaryCta.style.transform = 'translateY(0) scale(1)';
+    });
+  }
+
+  if (secondaryCta) {
+    secondaryCta.addEventListener('mouseenter', () => {
+      secondaryCta.style.transform = 'translateY(-3px) scale(1.02)';
+    });
+    secondaryCta.addEventListener('mouseleave', () => {
+      secondaryCta.style.transform = 'translateY(0) scale(1)';
+    });
+  }
+
+  // Track hero CTA clicks
+  document.querySelectorAll('.hero-production__cta a').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const label = btn.textContent.trim();
+      console.log(`Hero CTA Clicked: ${label}`);
+      // Optional: Send to analytics
+      // gtag('event', 'hero_cta_click', { 'button': label });
+    });
+  });
+});
