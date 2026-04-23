@@ -17,12 +17,23 @@ document.addEventListener('DOMContentLoaded', function() {
       navbarMenu.classList.toggle('active');
     });
     
-    // Close menu when clicking on a link
-    const navLinks = document.querySelectorAll('.navbar-menu a');
+    // Close menu when clicking on a link (except dropdown toggles)
+    const navLinks = document.querySelectorAll('.navbar-menu > li > a:not(.dropdown-toggle)');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         navbarToggle.classList.remove('active');
         navbarMenu.classList.remove('active');
+      });
+    });
+
+    // Mobile dropdown toggle
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          this.parentElement.classList.toggle('active');
+        }
       });
     });
   }
@@ -200,6 +211,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
+  // ========================================
+  // Accordion Logic
+  // ========================================
+  const accordions = document.querySelectorAll('.accordion-header');
+  
+  accordions.forEach(acc => {
+    acc.addEventListener('click', function() {
+      // Toggle active class on parent
+      const parent = this.parentElement;
+      const isActive = parent.classList.contains('active');
+      
+      // Close all other accordions (optional)
+      /* 
+      document.querySelectorAll('.accordion').forEach(a => {
+        a.classList.remove('active');
+      });
+      */
+      
+      if (isActive) {
+        parent.classList.remove('active');
+      } else {
+        parent.classList.add('active');
+      }
+    });
+  });
+
   // ========================================
   // Card Click Handling
   // ========================================
