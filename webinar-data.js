@@ -1,10 +1,9 @@
 // ==========================================
-// DATABASE WEBINAR STRATIVO
+// DATABASE WEBINAR STRATIVO (FULL VERSION)
 // ==========================================
-// Instruksi: 
-// 1. Tambahkan object baru di dalam array 'webinars' untuk nambah webinar.
-// 2. Hapus object untuk menghapus webinar.
-// 3. Ubah status 'status' jadi 'upcoming' atau 'past'.
+// Cara Edit:
+// 1. Ganti 'flyerUrl' dengan link gambar flyer Anda nanti.
+// 2. Topik dan Benefit menggunakan format HTML string (<ul><li>...</li></ul>)
 // ==========================================
 
 const webinars = [
@@ -14,13 +13,41 @@ const webinars = [
     title: "Certified Organizational Design Professional",
     date: "2-3 Mei 2026 | 18:00 - 20:00 WIB",
     category: "Live",
-    status: "upcoming", // 'upcoming' atau 'past'
+    status: "upcoming",
     priceOld: "Rp 450.000",
     priceNew: "Rp 250.000",
     isEarlyBird: true,
     earlyBirdDeadline: "30 April 2026",
-    description: "Pelajari The Star Model, Diagnosis Misalignment, dan RAPID Framework untuk struktur organisasi yang agile.",
-    topicUrl: "https://wa.me/6282124198198?text=Halo%20saya%20ingin%20mendaftar%20Webinar%20Organizational%20Design"
+    
+    // Ganti URL ini dengan link flyer gambar Anda
+    flyerUrl: "https://via.placeholder.com/600x400?text=Flyer+Org+Design", 
+
+    // HTML string untuk Topik/Materi
+    topics: `
+      <strong>HARI 1: Strategic Alignment</strong>
+      <ul class="w-list">
+        <li>The Star Model (Galbraith)</li>
+        <li>Diagnosa Gejala Misalignment</li>
+        <li>Designing for Strategy</li>
+      </ul>
+      <br>
+      <strong>HARI 2: Structure & Process</strong>
+      <ul class="w-list">
+        <li>Structural Archetypes & Sizing</li>
+        <li>RAPID® Framework Decision Rights</li>
+        <li>Lateral Capability & AI Integration</li>
+      </ul>
+    `,
+
+    // HTML string untuk Benefit
+    benefits: `
+      <ul class="w-list benefit">
+        <li>Sertifikat Certified Organizational Design</li>
+        <li>Template Star Model & RAPID Framework</li>
+        <li>Bergabung Komunitas Inc. Box</li>
+      </ul>
+    `,
+    topicUrl: "https://wa.me/6282124198198?text=Halo%20saya%20ingin%20mendaftar%20Webinar%20Org%20Design"
   },
   {
     id: 2,
@@ -33,8 +60,23 @@ const webinars = [
     priceNew: "Rp 250.000",
     isEarlyBird: true,
     earlyBirdDeadline: "5 Mei 2026",
-    description: "Fundamental Warehouse Operation, Inventory Accuracy, dan Productivity KPI.",
-    topicUrl: "https://wa.me/6282124198198?text=Halo%20saya%20ingin%20mendaftar%20Webinar%20Warehouse%20Management"
+    flyerUrl: "https://via.placeholder.com/600x400?text=Flyer+Warehouse",
+    topics: `
+      <ul class="w-list">
+        <li>Fundamental Warehouse Operation</li>
+        <li>Inventory Accuracy & Control</li>
+        <li>Warehouse Process & Productivity</li>
+        <li>Safety, KPI, dan Problem Solving</li>
+      </ul>
+    `,
+    benefits: `
+      <ul class="w-list benefit">
+        <li>Sertifikat Certified WMO</li>
+        <li>Materi Slide Lengkap</li>
+        <li>Akses Rekaman Webinar</li>
+      </ul>
+    `,
+    topicUrl: "https://wa.me/6282124198198?text=Halo%20saya%20ingin%20mendaftar%20Webinar%20Warehouse"
   },
   {
     id: 3,
@@ -47,12 +89,28 @@ const webinars = [
     priceNew: "Rp 150.000",
     isEarlyBird: true,
     earlyBirdDeadline: "12 Mei 2026",
-    description: "Analisa Rasio, Laporan Keuangan Horizontal/Vertikal, dan Budgeting. Narasumber: Febri Ardiansyah, M.Ak.",
-    topicUrl: "https://wa.me/6282124198198?text=Halo%20saya%20ingin%20mendaftar%20Webinar%20Financial%20Analysis"
+    flyerUrl: "https://via.placeholder.com/600x400?text=Flyer+Financial",
+    speaker: "Narasumber: Febri Ardiansyah, S.Ak, M.Ak",
+    topics: `
+      <ul class="w-list">
+        <li>Penyajian Laporan Analisis Horizontal & Vertikal</li>
+        <li>Mempelajari Laporan Analisa Rasio Keuangan</li>
+        <li>Proses dan Jenis-jenis Budgeting</li>
+        <li>Template Laporan Keuangan & Ratio Calculator</li>
+      </ul>
+    `,
+    benefits: `
+      <ul class="w-list benefit">
+        <li>Sertifikat Certified Financial Analysis</li>
+        <li>Kertas Kerja Executable (Excel)</li>
+        <li>Bergabung dengan komunitas Inc. Box</li>
+      </ul>
+    `,
+    topicUrl: "https://wa.me/6282124198198?text=Halo%20saya%20ingin%20mendaftar%20Webinar%20Financial"
   },
   {
     id: 4,
-    icon: "📜",
+    icon: "⚖️",
     title: "Certified Business Contract Practitioner",
     date: "11 Mei 2026 | 18:00 - 20:00 WIB",
     category: "Live",
@@ -61,20 +119,37 @@ const webinars = [
     priceNew: "Rp 100.000",
     isEarlyBird: true,
     earlyBirdDeadline: "4 Mei 2026",
-    description: "Prinsip Kontrak, UU Cipta Kerja, dan Strategi Litigasi. Narasumber: Dr. Suwardi S.H., M.Hum.",
-    topicUrl: "https://wa.me/6282124198198?text=Halo%20saya%20ingin%20mendaftar%20Webinar%20Business%20Contract"
+    flyerUrl: "https://via.placeholder.com/600x400?text=Flyer+Contract",
+    speaker: "Narasumber: Dr. Suwardi S.H., M.Hum.",
+    topics: `
+      <ul class="w-list">
+        <li>Prinsip Kontrak & UU Cipta Kerja (Omnibus Law)</li>
+        <li>Anatomi Kontrak Bisnis & Hak Kewajiban Para Pihak</li>
+        <li>Strategi Litigasi vs Non-Litigasi</li>
+        <li>Perlindungan Bagi Pekerja & Pengusaha</li>
+      </ul>
+    `,
+    benefits: `
+      <ul class="w-list benefit">
+        <li>Gelar Non-Akademik Certified Business Contract Practitioner</li>
+        <li>Akses Materi & Dokumen Pendukung</li>
+        <li>Rekaman Webinar & Tes/Quiz</li>
+        <li>Konsultasi Gratis Kontrak (Berlaku)</li>
+      </ul>
+    `,
+    topicUrl: "https://wa.me/6282124198198?text=Halo%20saya%20ingin%20mendaftar%20Webinar%20Contract"
   }
 ];
 
 // ==========================================
-// LOGIC RENDERING (JANGAN DIUBAH KECUALI PAHAM JS)
+// LOGIC RENDERING (JANGAN DIUBAH)
 // ==========================================
 
 const gridContainer = document.getElementById('webinar-grid');
 const filterButtons = document.querySelectorAll('.filter-btn');
 
 function renderWebinars(filterType = 'all') {
-  gridContainer.innerHTML = ''; // Kosongkan dulu
+  gridContainer.innerHTML = ''; 
 
   const filteredData = webinars.filter(item => {
     if (filterType === 'all') return true;
@@ -83,38 +158,59 @@ function renderWebinars(filterType = 'all') {
   });
 
   if (filteredData.length === 0) {
-    gridContainer.innerHTML = '<p style="text-align:center; grid-column:1/-1;">Belum ada jadwal webinar di kategori ini.</p>';
+    gridContainer.innerHTML = '<p style="text-align:center; grid-column:1/-1; color:#666;">Belum ada jadwal webinar di kategori ini.</p>';
     return;
   }
 
   filteredData.forEach(webinar => {
-    // Tentukan Status Tombol
+    // Logic Tombol & Harga
     let btnClass = "btn-w-register";
     let btnText = "Daftar Sekarang via WhatsApp";
+    let priceHtml = `<span class="price-old">${webinar.priceOld}</span> <span class="price-new">${webinar.priceNew}</span>`;
+
     if (webinar.status === 'past') {
       btnClass += " btn-disabled";
       btnText = "Webinar Selesai";
     }
 
-    // Buat HTML Card
+    // Speaker Badge
+    let speakerBadge = webinar.speaker ? `<div style="font-size:0.8rem; color:#666; margin-bottom:10px; font-style:italic;">🎙️ ${webinar.speaker}</div>` : '';
+
+    // Buat HTML Card Lengkap
     const cardHTML = `
       <div class="w-card animate-fade-in-up">
+        <!-- Header & Flyer -->
         <div class="w-header">
-          <span class="w-category">${webinar.icon}</span>
-          <h3 class="w-title">${webinar.title}</h3>
-          <div class="w-badges">
-            <span class="badge badge-live">${webinar.category}</span>
-            ${webinar.isEarlyBird ? '<span class="badge badge-early">🔥 Early Bird</span>' : ''}
+          <div class="w-flyer" style="background-image: url('${webinar.flyerUrl}');"></div>
+          <div style="padding:15px 0 0;">
+            <h3 class="w-title">${webinar.title}</h3>
+            ${speakerBadge}
+            <div class="w-badges">
+              <span class="badge badge-live">${webinar.category}</span>
+              ${webinar.isEarlyBird ? '<span class="badge badge-early">🔥 Early Bird</span>' : ''}
+            </div>
           </div>
         </div>
+        
+        <!-- Body Content -->
         <div class="w-body">
           <div class="w-date">📅 ${webinar.date}</div>
-          <div class="w-price">
-            <span class="price-old">${webinar.priceOld}</span>
-            <span class="price-new">${webinar.priceNew}</span>
+          <div class="w-price">${priceHtml}</div>
+          
+          <!-- Tabs / Details (Topik & Benefit) -->
+          <div class="w-details">
+            <div class="w-detail-group">
+              <h5>📚 Topik & Materi</h5>
+              ${webinar.topics}
+            </div>
+            <div class="w-detail-group">
+              <h5>🎁 Benefit</h5>
+              ${webinar.benefits}
+            </div>
           </div>
-          <p class="w-desc">${webinar.description}</p>
         </div>
+        
+        <!-- Footer Button -->
         <div class="w-footer">
           <a href="${webinar.topicUrl}" target="_blank" class="${btnClass}">${btnText}</a>
         </div>
@@ -127,11 +223,8 @@ function renderWebinars(filterType = 'all') {
 // Event Listener untuk Filter
 filterButtons.forEach(btn => {
   btn.addEventListener('click', () => {
-    // Hapus active class dari semua tombol
     filterButtons.forEach(b => b.classList.remove('active'));
-    // Tambah active ke tombol yang diklik
     btn.classList.add('active');
-    // Render ulang
     renderWebinars(btn.dataset.filter);
   });
 });
