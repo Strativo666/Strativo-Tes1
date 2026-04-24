@@ -50,7 +50,7 @@ const webinars = [
     speaker: "Narasumber: Febri Ardiansyah, S.Ak, M.Ak",
     topics: "<ul><li>Penyajian Laporan Analisis Horizontal & Vertikal</li><li>Mempelajari Laporan Analisa Rasio Keuangan</li><li>Proses dan Jenis-jenis Budgeting</li><li>Template Laporan Keuangan & Ratio Calculator</li></ul>",
     benefits: "<ul><li>Sertifikat Certified Financial Analysis</li><li>Kertas Kerja Executable (Excel)</li><li>Bergabung dengan komunitas Inc. Box</li></ul>",
-    topicUrl: "https://wa.me/6282124198198?text=Halo%20saya%20ingin%20mendaftar%20Webinar%20Financial"
+    topicUrl: "https://tally.so/r/681N1Y"
   },
   {
     id: 4,
