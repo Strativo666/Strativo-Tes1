@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     data.forEach(w => {
       const isPast = w.status === 'past';
       const btnClass = isPast ? 'btn-w-register btn-disabled' : 'btn-w-register';
-      const btnText = isPast ? 'Webinar Selesai' : 'Daftar via WhatsApp';
+      const btnText = isPast ? 'Webinar Selesai' : 'Daftar Sekarang';
       const speakerHTML = w.speaker ? `<div style="font-size:0.85rem; color:#555; margin:0.5rem 0 1rem; font-style:italic;">🎙️ ${w.speaker}</div>` : '';
       
       const card = `
