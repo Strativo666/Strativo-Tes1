@@ -14,7 +14,8 @@ const webinars = [
     priceNew: "Rp 250.000",
     isEarlyBird: true,
     earlyBirdDeadline: "30 April 2026",
-    flyerUrl: "https://via.placeholder.com/600x400?text=Flyer+Org+Design",
+    flyerUrl: "https://t90181841444.p.clickup-attachments.com/t90181841444/8cf62067-01ab-4603-882c-d7eb3d8d6543/Certified%20Organizational%20Development%20Professional.png?view=open",
+    speaker: "Narasumber: Dodi Rakhmat M.",
     topics: "<strong>HARI 1: Strategic Alignment</strong><ul><li>The Star Model (Galbraith)</li><li>Diagnosa Gejala Misalignment</li><li>Designing for Strategy</li></ul><br><strong>HARI 2: Structure & Process</strong><ul><li>Structural Archetypes & Sizing</li><li>RAPID® Framework Decision Rights</li><li>Lateral Capability & AI Integration</li></ul>",
     benefits: "<ul><li>Sertifikat Certified Organizational Design</li><li>Template Star Model & RAPID Framework</li><li>Bergabung Komunitas Inc. Box</li></ul>",
     topicUrl: "https://wa.me/6282124198198?text=Halo%20saya%20ingin%20mendaftar%20Webinar%20Org%20Design"
@@ -30,7 +31,8 @@ const webinars = [
     priceNew: "Rp 250.000",
     isEarlyBird: true,
     earlyBirdDeadline: "5 Mei 2026",
-    flyerUrl: "https://via.placeholder.com/600x400?text=Flyer+Warehouse",
+    flyerUrl: "https://t90181841444.p.clickup-attachments.com/t90181841444/cbe08b4e-df51-4a4c-aa38-2ef5a74908ec/WhatsApp%20Image%202026-04-24%20at%2014.48.23.jpeg?view=open",
+    speaker: "Narasumber: Muchammad Syahroni CLP",
     topics: "<ul><li>Fundamental Warehouse Operation</li><li>Inventory Accuracy & Control</li><li>Warehouse Process & Productivity</li><li>Safety, KPI, dan Problem Solving</li></ul>",
     benefits: "<ul><li>Sertifikat Certified WMO</li><li>Materi Slide Lengkap</li><li>Akses Rekaman Webinar</li></ul>",
     topicUrl: "https://wa.me/6282124198198?text=Halo%20saya%20ingin%20mendaftar%20Webinar%20Warehouse"
@@ -46,7 +48,7 @@ const webinars = [
     priceNew: "Rp 150.000",
     isEarlyBird: true,
     earlyBirdDeadline: "12 Mei 2026",
-    flyerUrl: "https://via.placeholder.com/600x400?text=Flyer+Financial",
+    flyerUrl: "https://t90181841444.p.clickup-attachments.com/t90181841444/a038a03c-a16d-4c0e-a98d-66744eaaa789/Financial%20Analysis%20Fundamentals.png?view=open",
     speaker: "Narasumber: Febri Ardiansyah, S.Ak, M.Ak",
     topics: "<ul><li>Penyajian Laporan Analisis Horizontal & Vertikal</li><li>Mempelajari Laporan Analisa Rasio Keuangan</li><li>Proses dan Jenis-jenis Budgeting</li><li>Template Laporan Keuangan & Ratio Calculator</li></ul>",
     benefits: "<ul><li>Sertifikat Certified Financial Analysis</li><li>Kertas Kerja Executable (Excel)</li><li>Bergabung dengan komunitas Inc. Box</li></ul>",
@@ -63,7 +65,7 @@ const webinars = [
     priceNew: "Rp 100.000",
     isEarlyBird: true,
     earlyBirdDeadline: "4 Mei 2026",
-    flyerUrl: "https://via.placeholder.com/600x400?text=Flyer+Contract",
+    flyerUrl: "https://t90181841444.p.clickup-attachments.com/t90181841444/4e5b10db-48b1-4e16-bd6f-735488d38270/Certified%20Business%20Contract%20Practitioner.png?view=open",
     speaker: "Narasumber: Dr. Suwardi S.H., M.Hum.",
     topics: "<ul><li>Prinsip Kontrak & UU Cipta Kerja (Omnibus Law)</li><li>Anatomi Kontrak Bisnis & Hak Kewajiban Para Pihak</li><li>Strategi Litigasi vs Non-Litigasi</li><li>Perlindungan Bagi Pekerja & Pengusaha</li></ul>",
     benefits: "<ul><li>Gelar Non-Akademik Certified Business Contract Practitioner</li><li>Akses Materi & Dokumen Pendukung</li><li>Rekaman Webinar & Tes/Quiz</li><li>Konsultasi Gratis Kontrak (Berlaku)</li></ul>",
@@ -155,4 +157,59 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Initial Render
   render();
+});
+
+// ==========================================
+// FLYER MODAL FUNCTIONALITY
+// ==========================================
+
+// Tambahkan event listener untuk klik flyer
+function initFlyerModal() {
+  // Buat modal element
+  const modal = document.createElement('div');
+  modal.className = 'flyer-modal';
+  modal.innerHTML = `
+    <div class="flyer-modal-close">&times;</div>
+    <img src="" alt="Flyer Webinar" class="modal-flyer-img">
+  `;
+  
+  document.body.appendChild(modal);
+  
+  // Close modal
+  const closeBtn = modal.querySelector('.flyer-modal-close');
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+  
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+    }
+  });
+  
+  // Escape key to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      modal.classList.remove('active');
+    }
+  });
+  
+  // Add click event ke semua flyer
+  document.addEventListener('click', (e) => {
+    const flyer = e.target.closest('.w-flyer');
+    if (flyer) {
+      const imgUrl = flyer.style.backgroundImage.replace(/url\(['"]?(.*?)['"]?\)/, '$1');
+      const modalImg = modal.querySelector('.modal-flyer-img');
+      modalImg.src = imgUrl;
+      modal.classList.add('active');
+    }
+  });
+}
+
+// Initialize modal setelah webinar dirender
+document.addEventListener('DOMContentLoaded', () => {
+  // ... existing code ...
+  
+  // Init modal setelah render
+  setTimeout(initFlyerModal, 500);
 });
