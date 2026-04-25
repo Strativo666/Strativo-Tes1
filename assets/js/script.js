@@ -726,3 +726,54 @@ document.addEventListener('DOMContentLoaded', () => {
   updateButtons();
 });
 
+// ========================================
+// CLIENT LOGOS - INFINITE AUTO SCROLL
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.getElementById('logosTrack');
+  
+  if (!track) return;
+  
+  // Clone semua logo untuk infinite loop
+  const originalLogos = Array.from(track.children);
+  const totalLogos = originalLogos.length;
+  
+  // Clone setiap logo 2 kali untuk seamless loop
+  originalLogos.forEach(logo => {
+    const clone1 = logo.cloneNode(true);
+    
+    track.appendChild(clone1);
+    
+  });
+  
+  // Pause on hover
+  track.addEventListener('mouseenter', () => {
+    track.style.animationPlayState = 'paused';
+  });
+  
+  track.addEventListener('mouseleave', () => {
+    track.style.animationPlayState = 'running';
+  });
+
+  // ========================================
+// CLIENT LOGOS - INFINITE LOOP LOGIC
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.getElementById('logosTrack');
+  if (!track) return;
+
+  // 1. Ambil semua logo asli
+  const items = Array.from(track.children);
+  
+  // 2. Duplikasi semua logo dan tambahkan ke akhir (Bikin 2 set identik)
+  // Ini kuncinya agar saat animasi geser 50%, tampilan tetap sama persis
+  items.forEach(item => {
+    const clone = item.cloneNode(true);
+    track.appendChild(clone);
+  });
+
+  // 3. Mulai animasi
+  track.classList.add('is-scrolling');
+});
+});
+
