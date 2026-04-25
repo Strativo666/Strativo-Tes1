@@ -3993,7 +3993,7 @@ CLIENT LOGOS - INFINITE AUTO SCROLL
 /* Responsive */
 @media (max-width: 768px) {
   .logo-item {
-    width: 140px;
+    width: 160px;
     height: 70px;
   }
   .logos-track {
@@ -4003,7 +4003,7 @@ CLIENT LOGOS - INFINITE AUTO SCROLL
 
 @media (max-width: 480px) {
   .logo-item {
-    width: 10px;
+    width: 150px;
     height: 60px;
   }
 }
