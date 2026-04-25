@@ -3927,3 +3927,83 @@ STRATEGIC PAGE STYLES (Scoped)
 .breadcrumb span {
   color: var(--color-gray-500);
 }
+
+/* ========================================
+CLIENT LOGOS - INFINITE AUTO SCROLL
+========================================= */
+.client-logos-section {
+  padding: 4rem 0;
+  background: var(--color-white);
+  border-top: 1px solid var(--color-gray-200);
+  border-bottom: 1px solid var(--color-gray-200);
+  overflow: hidden;
+}
+
+.logos-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.logos-track {
+  display: flex;
+  gap: 3rem;
+  animation: scroll-logos 30s linear infinite;
+  width: max-content;
+}
+
+.logos-track:hover {
+  animation-play-state: paused;
+}
+
+.logo-item {
+  flex-shrink: 0;
+  width: 200px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.logo-item:hover {
+  transform: scale(1.05);
+}
+
+.logo-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: none;
+  opacity: 1;
+}
+
+/* Infinite Scroll Animation */
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 1.5rem));
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-item {
+    width: 140px;
+    height: 70px;
+  }
+  .logos-track {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-item {
+    width: 10px;
+    height: 60px;
+  }
+}
