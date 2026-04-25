@@ -18,7 +18,7 @@ const webinars = [
     speaker: "Narasumber: Dodi Rakhmat M.",
     topics: "<strong>HARI 1: Strategic Alignment</strong><ul><li>The Star Model (Galbraith)</li><li>Diagnosa Gejala Misalignment</li><li>Designing for Strategy</li></ul><br><strong>HARI 2: Structure & Process</strong><ul><li>Structural Archetypes & Sizing</li><li>RAPID® Framework Decision Rights</li><li>Lateral Capability & AI Integration</li></ul>",
     benefits: "<ul><li>Sertifikat Certified Organizational Design</li><li>Template Star Model & RAPID Framework</li><li>Bergabung Komunitas Inc. Box</li></ul>",
-    topicUrl: "https://wa.me/6282124198198?text=Halo%20saya%20ingin%20mendaftar%20Webinar%20Org%20Design"
+    topicUrl: "https://tally.so/r/ja06W6"
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const webinars = [
     speaker: "Narasumber: Muchammad Syahroni CLP",
     topics: "<ul><li>Fundamental Warehouse Operation</li><li>Inventory Accuracy & Control</li><li>Warehouse Process & Productivity</li><li>Safety, KPI, dan Problem Solving</li></ul>",
     benefits: "<ul><li>Sertifikat Certified WMO</li><li>Materi Slide Lengkap</li><li>Akses Rekaman Webinar</li></ul>",
-    topicUrl: "https://wa.me/6282124198198?text=Halo%20saya%20ingin%20mendaftar%20Webinar%20Warehouse"
+    topicUrl: "https://tally.so/r/XxRJrY"
   },
   {
     id: 3,
@@ -69,7 +69,7 @@ const webinars = [
     speaker: "Narasumber: Dr. Suwardi S.H., M.Hum.",
     topics: "<ul><li>Prinsip Kontrak & UU Cipta Kerja (Omnibus Law)</li><li>Anatomi Kontrak Bisnis & Hak Kewajiban Para Pihak</li><li>Strategi Litigasi vs Non-Litigasi</li><li>Perlindungan Bagi Pekerja & Pengusaha</li></ul>",
     benefits: "<ul><li>Gelar Non-Akademik Certified Business Contract Practitioner</li><li>Akses Materi & Dokumen Pendukung</li><li>Rekaman Webinar & Tes/Quiz</li><li>Konsultasi Gratis Kontrak (Berlaku)</li></ul>",
-    topicUrl: "https://wa.me/6282124198198?text=Halo%20saya%20ingin%20mendaftar%20Webinar%20Contract"
+    topicUrl: "https://tally.so/r/ODjJ17"
   }
 ];
 
