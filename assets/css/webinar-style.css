@@ -1,0 +1,263 @@
+/* === WEBINAR PAGE STYLING === */
+
+.webinar-hero {
+  padding: 120px 0 60px;
+  background: linear-gradient(135deg, #0A1E3D 0%, #1a3a5f 100%);
+  color: white;
+  text-align: center;
+}
+
+.badge-hero {
+  background: rgba(255, 107, 53, 0.2);
+  color: #FF6B35;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.webinar-hero h1 {
+  color: white;
+  margin: 15px 0;
+}
+
+.webinar-hero p {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* Filter Tabs */
+.webinar-filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: #FF6B35;
+  border-color: #FF6B35;
+  color: white;
+}
+
+/* Grid Layout */
+.webinar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  padding-top: 40px;
+}
+
+/* Card Style */
+.w-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+}
+
+.w-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.w-header {
+  padding: 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.w-category {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.w-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0A1E3D;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.w-badges {
+  margin-top: 10px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.badge-live { background: #E3F2FD; color: #1976D2; }
+.badge-early { background: #FFF3E0; color: #E65100; }
+
+.w-body {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.w-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.w-price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.price-old {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.price-new {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0A1E3D;
+}
+
+.w-desc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.w-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+}
+
+.btn-w-register {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #0066FF;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-w-register:hover {
+  background: #0052CC;
+}
+
+.btn-disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.loading-state {
+  text-align: center;
+  grid-column: 1 / -1;
+  padding: 40px;
+  color: #888;
+}
+
+/* Tambahan CSS untuk Detail Webinar (Topics, Benefits, Flyer) */
+.webinar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2.5rem;
+  padding-top: 40px;
+}
+
+/* Flyer Image Container */
+.w-flyer {
+  width: 100%;
+  height: 220px;
+  background-color: #f3f4f6;
+  background-image: url('https://via.placeholder.com/600x400?text=Flyer+Webinar'); /* Placeholder */
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* Detail Lists (Topik & Benefit) */
+.w-details {
+  padding: 1.25rem;
+  background: #f9fafb;
+  border-radius: 0 0 12px 12px;
+  border-top: 1px solid #eee;
+}
+
+.w-detail-group {
+  margin-bottom: 1rem;
+}
+.w-detail-group h5 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.w-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-gray-700);
+  line-height: 1.6;
+}
+
+.w-list li {
+  margin-bottom: 0.35rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.w-list li::before {
+  content: '•';
+  color: var(--color-secondary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Benefit List Styling */
+.w-list.benefit li::before {
+  content: '✅';
+  font-size: 0.8rem;
+  left: -2px;
+}

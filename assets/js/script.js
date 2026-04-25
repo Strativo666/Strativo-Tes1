@@ -478,16 +478,16 @@ document.querySelectorAll('.service-card-premium').forEach(card => {
 
 // Smooth scroll for anchor links with navbar offset
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+  anchor.addEventListener('click', function (e) {
     const href = this.getAttribute('href');
     if (href === '#') return;
-    
+
     const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 80;
       const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-      
+
       window.scrollTo({
         top: targetPosition,
         behavior: 'smooth'
@@ -519,7 +519,7 @@ document.querySelectorAll('.solution-step').forEach(step => {
 
 // Track CTA clicks for analytics (optional)
 document.querySelectorAll('[href*="contact.html?service"]').forEach(link => {
-  link.addEventListener('click', function() {
+  link.addEventListener('click', function () {
     const service = new URLSearchParams(this.search).get('service');
     console.log(`CTA Clicked - Service: ${service}`);
     // Optional: Send to analytics
@@ -529,10 +529,10 @@ document.querySelectorAll('[href*="contact.html?service"]').forEach(link => {
 
 // Add subtle hover effect enhancement for problem cards
 document.querySelectorAll('.problem-card').forEach(card => {
-  card.addEventListener('mouseenter', function() {
+  card.addEventListener('mouseenter', function () {
     this.style.zIndex = '5';
   });
-  card.addEventListener('mouseleave', function() {
+  card.addEventListener('mouseleave', function () {
     this.style.zIndex = '1';
   });
 });
@@ -628,3 +628,101 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+// Horizontal Scroll Navigation
+function initSolutionScroll() {
+  const containers = document.querySelectorAll('.solution-scroll-container');
+
+  containers.forEach(container => {
+    const wrapper = container.parentElement;
+    const prevBtn = wrapper.querySelector('.scroll-nav-btn.prev');
+    const nextBtn = wrapper.querySelector('.scroll-nav-btn.next');
+
+    if (!prevBtn || !nextBtn) return;
+
+    const scrollAmount = 350;
+
+    prevBtn.addEventListener('click', () => {
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    // Update button states
+    container.addEventListener('scroll', () => {
+      prevBtn.disabled = container.scrollLeft === 0;
+      nextBtn.disabled = container.scrollLeft + container.clientWidth >= container.scrollWidth - 10;
+    });
+
+    // Initial check
+    prevBtn.disabled = true;
+  });
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', initSolutionScroll);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.service-carousel-track');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  const cards = document.querySelectorAll('.service-carousel-track .service-card-premium');
+
+  if (!track || !prevBtn || !nextBtn || cards.length === 0) return;
+
+  let currentIndex = 0;
+
+  function getVisibleCards() {
+    if (window.innerWidth <= 640) return 1;
+    if (window.innerWidth <= 1024) return 2;
+    return 3;
+  }
+
+  function updateButtons() {
+    const visible = getVisibleCards();
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= cards.length - visible;
+  }
+
+  function slide() {
+    const visible = getVisibleCards();
+    const cardWidth = cards[0].offsetWidth;
+    const gap = parseFloat(getComputedStyle(track).gap) || 32;
+    track.scrollTo({
+      left: currentIndex * (cardWidth + gap),
+      behavior: 'smooth'
+    });
+    updateButtons();
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      slide();
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    const visible = getVisibleCards();
+    if (currentIndex < cards.length - visible) {
+      currentIndex++;
+      slide();
+    }
+  });
+
+  // Reset position on resize
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      currentIndex = Math.min(currentIndex, cards.length - getVisibleCards());
+      slide();
+    }, 200);
+  });
+
+  updateButtons();
+});
+
