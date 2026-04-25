@@ -1971,18 +1971,6 @@ HVP Strategic Service Page Styles
   display: inline;
 }
 
-.service-hero h1 .highlight::after {
-  content: '';
-  position: absolute;
-  bottom: 8px;
-  left: 0;
-  right: 0;
-  height: 14px;
-  background: rgba(0, 102, 255, 0.25);
-  border-radius: 10px;
-  z-index: -1;
-}
-
 .service-hero .lead {
   font-size: 1.35rem;
   color: rgba(255, 255, 255, 0.92);
@@ -2710,18 +2698,6 @@ HERO PRODUCTION - PREMIUM STYLE
   display: inline;
 }
 
-.hero-production__highlight::after {
-  content: '';
-  position: absolute;
-  bottom: 8px;
-  left: 0;
-  right: 0;
-  height: 14px;
-  background: rgba(0, 102, 255, 0.2);
-  border-radius: 10px;
-  z-index: -1;
-}
-
 /* Subtitle */
 .hero-production__subtitle {
   font-size: 1.35rem;
@@ -3111,18 +3087,6 @@ HVP MAIN PAGE - PREMIUM UPGRADE
   color: var(--color-secondary);
   position: relative;
   display: inline;
-}
-
-.hero-hvp .highlight::after {
-  content: '';
-  position: absolute;
-  bottom: 8px;
-  left: 0;
-  right: 0;
-  height: 12px;
-  background: rgba(0, 102, 255, 0.25);
-  border-radius: 10px;
-  z-index: -1;
 }
 
 .hero-hvp .lead {
